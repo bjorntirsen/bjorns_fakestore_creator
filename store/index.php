@@ -1,4 +1,9 @@
 <?php
-require_once 'App.php';
+require_once 'Fakestore.php';
 
-App::renderGroupedArray($_GET['endpoint']);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  Fakestore::create($_POST['endpoint']);
+  exit;
+}
+
+Fakestore::create($_GET['endpoint']);

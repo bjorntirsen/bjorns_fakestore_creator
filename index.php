@@ -41,9 +41,9 @@ $grouped_array = App::getGroupedArray();
                 </div>
             </div>
             <div id="mainContainer" class="container d-flex align-items-center flex-column">
-                <form action="#">
-                    <label class="text-secondary" for="url">Create a new store:</label>
-                    <input type="text" id="url" name="url" class="text-center form-control" required placeholder="API URL here">
+                <form action="store/" method="post">
+                    <label class="text-secondary" for="endpoint">Create a new store:</label>
+                    <input type="text" id="endpoint" name="endpoint" class="text-center form-control" required placeholder="API URL here">
                     <input type="submit" class="form-control mt-2 btn btn-outline-secondary" value="Create New Store">
                 </form>
                 <p class="mt-2">Or visit one below:</p>

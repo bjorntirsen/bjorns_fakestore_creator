@@ -1,6 +1,28 @@
 <?php
-class App
+class Fakestore
 {
+  public static function create($endpoint){
+    $grouped_array = self::getGroupedArray($endpoint);
+    //var_dump(array_keys($grouped_array));
+    foreach ($grouped_array as $key => $value) {
+      self::renderCategory($key, $value);
+    }
+    /* foreach (array_keys($grouped_array) as $category_name) {
+      echo $category_name . '</br>';
+    } */
+  }
+
+  public static function renderCategory($category, $items){
+    echo "<p>$category</p>";
+    //var_dump($items);
+    $ol = '<ol>';
+    foreach ($items as $value) {
+      $ol .= "<li>$value[title]</li>";
+    }
+    $ol .= '</ol>';
+    echo $ol;
+  }
+
   public static function renderGroupedArray($endpoint){
     print_r(self::getGroupedArray($endpoint));
   }
