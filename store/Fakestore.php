@@ -13,11 +13,15 @@ class Fakestore
   }
 
   public static function renderCategory($category, $items){
+    
     echo "<p>$category</p>";
     //var_dump($items);
     $ol = '<ol>';
     foreach ($items as $value) {
-      $ol .= "<li>$value[title]</li>";
+      $title = 'title';
+      if (empty($value['title']) && empty($value['cardname'])) $title = 'name';
+      if (empty($value['title']) && empty($value['name'])) $title = 'cardname';
+      $ol .= "<li>$value[$title]</li>";
     }
     $ol .= '</ol>';
     echo $ol;
