@@ -14,17 +14,30 @@ class Fakestore
 
   public static function renderCategory($category, $items){
     
-    echo "<p>$category</p>";
+    echo "<h1 class='text-center'>$category</h1>";
     //var_dump($items);
-    $ol = '<ol>';
+    $div = '<div class="container row mx-auto">';
     foreach ($items as $value) {
       $title = 'title';
       if (empty($value['title']) && empty($value['cardname'])) $title = 'name';
       if (empty($value['title']) && empty($value['name'])) $title = 'cardname';
-      $ol .= "<li>$value[$title]</li>";
+      $img = 'img';
+      if (empty($value['img'])) $img = 'image';
+      $div .= self::renderCard($value[$img], $value[$title]);
     }
-    $ol .= '</ol>';
-    echo $ol;
+    $div .= '</div>';
+    echo $div;
+  }
+
+  private static function renderCard($src, $title){
+    return "
+    <div class='card m-1' style='width: 8rem;'>
+      <img src='$src' class='card-img-top' alt='...'>
+      <div class='card-body'>
+        <h5 class='card-title'>$title</h5>
+      </div>
+    </div>
+    ";
   }
 
   public static function renderGroupedArray($endpoint){
