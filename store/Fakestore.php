@@ -31,7 +31,7 @@ class Fakestore
 
   private static function renderCard($src, $title){
     return "
-    <div class='card m-1' style='width: 8rem;'>
+    <div class='card m-1 pt-3' style='width: 8rem;'>
       <img src='$src' class='card-img-top' alt='...'>
       <div class='card-body'>
         <h5 class='card-title'>$title</h5>
