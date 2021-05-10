@@ -46,7 +46,7 @@
             </div>
         </main>
         <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-white">
+        <div class="copyright2 copyright py-4 text-center text-white">
             <div class="container"><small>Copyright © Björn Tirsén 2021</small></div>
         </div>
         <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
