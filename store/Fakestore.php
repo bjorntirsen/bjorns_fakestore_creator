@@ -14,9 +14,9 @@ class Fakestore
 
   public static function renderCategory($category, $items){
     
-    echo "<h1 class='text-center'>$category</h1>";
+    echo "<h1 class='text-center text-capitalize'>$category</h1>";
     //var_dump($items);
-    $div = '<div class="container row mx-auto">';
+    $div = '<div class="container row mx-auto justify-content-center">';
     foreach ($items as $value) {
       $title = 'title';
       if (empty($value['title']) && empty($value['cardname'])) $title = 'name';
@@ -31,10 +31,10 @@ class Fakestore
 
   private static function renderCard($src, $title){
     return "
-    <div class='card m-1 pt-3' style='width: 8rem;'>
+    <div class='card m-1 pt-3' style='width: 10rem;'>
       <img src='$src' class='card-img-top' alt='...'>
       <div class='card-body'>
-        <h5 class='card-title'>$title</h5>
+        <h5 class='card-title text-center text-capitalize'>$title</h5>
       </div>
     </div>
     ";
