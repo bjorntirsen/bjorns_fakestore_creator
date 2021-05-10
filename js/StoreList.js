@@ -14,6 +14,10 @@ class StoreList {
         this.storeArray.push(store1);
         let store2 = new Store("Vanilla Fakestore", "https://fakestoreapi.com/products");
         this.storeArray.push(store2);
+        let store3 = new Store("Jimmys Fakestore", "https://pokemonwebb20.herokuapp.com/");
+        this.storeArray.push(store3);
+        let store4 = new Store("Georgios Fakestore", "http://georgios-restfulapi.herokuapp.com/");
+        this.storeArray.push(store4);
         console.log(this.storeArray);
         this.updateToLocalStorage();
     }
