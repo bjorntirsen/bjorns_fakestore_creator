@@ -1,7 +1,3 @@
-<?php
-include_once 'App.php';
-$grouped_array = App::getGroupedArray();
-?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
