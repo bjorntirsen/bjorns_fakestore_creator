@@ -14,7 +14,7 @@ require_once 'Fakestore.php';
   <?php
 
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    Fakestore::create($_POST['endpoint']);
+    var_dump($_POST);
     exit;
   }
   
