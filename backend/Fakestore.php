@@ -21,20 +21,23 @@ class Fakestore
       $title = 'title';
       if (empty($value['title']) && empty($value['cardname'])) $title = 'name';
       if (empty($value['title']) && empty($value['name'])) $title = 'cardname';
+      $description = 'description';
+      if (empty($value['description'])) $description = 'color';
       $img = 'img';
       if (empty($value['img'])) $img = 'image';
-      $div .= self::renderCard($value[$img], $value[$title]);
+      $div .= self::renderCard($value[$img], $value[$title], $value[$description]);
     }
     $div .= '</div>';
     echo $div;
   }
 
-  private static function renderCard($src, $title){
+  private static function renderCard($src, $title, $description){
     return "
-    <div class='card m-1 pt-3' style='width: 10rem;'>
+    <div class='card m-1 pt-3' style='width: 14rem;'>
       <img src='$src' class='card-img-top' alt='...'>
       <div class='card-body'>
         <h5 class='card-title text-center text-capitalize'>$title</h5>
+        <p class='card-text text-center'>$description</p>
       </div>
     </div>
     ";
@@ -57,7 +60,7 @@ class Fakestore
   private static function groupArray($array) {
     $grouped_array = array();
     foreach ($array as $item) {
-      $category = $item['category'];
+      $category = $item['category'] ?? $item['console'];
       $grouped_array[$category] = $grouped_array[$category] ?? $grouped_array[$category] = [];
       array_push($grouped_array[$category],$item);
     }
