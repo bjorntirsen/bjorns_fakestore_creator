@@ -14,15 +14,15 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <link href="css/styles2.css" rel="stylesheet" />
+        <link href="public/css/styles.css" rel="stylesheet" />
+        <link href="public/css/styles2.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Masthead-->
         <main  class="masthead2 bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <div class="col-lg-4 col-6 pt-5 d-flex align-items-center flex-column">
-                    <img class="masthead-avatar mb-3" src="assets/img/avataaars.svg" alt="" />
+                    <img class="masthead-avatar mb-3" src="public/img/avataaars.svg" alt="" />
                 </div>
                 <!-- Masthead Avatar Image-->
                 
@@ -61,9 +61,9 @@
         <!-- Core theme JS-->
         <!-- <script src="js/scripts.js"></script> -->
         <!-- My added JS-->
-        <script src="js/main.js"></script>
-        <script src="js/Interface.js"></script>
-        <script src="js/StoreList.js"></script>
-        <script src="js/Store.js"></script>
+        <script src="public/js/main.js"></script>
+        <script src="public/js/Interface.js"></script>
+        <script src="public/js/StoreList.js"></script>
+        <script src="public/js/Store.js"></script>
     </body>
 </html>
