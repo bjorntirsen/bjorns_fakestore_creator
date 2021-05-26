@@ -57,7 +57,7 @@ class Fakestore
   private static function groupArray($array) {
     $grouped_array = array();
     foreach ($array as $item) {
-      $category = $item['category'];
+      $category = $item['category'] ?? $item['console'];
       $grouped_array[$category] = $grouped_array[$category] ?? $grouped_array[$category] = [];
       array_push($grouped_array[$category],$item);
     }

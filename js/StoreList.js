@@ -11,17 +11,18 @@ class StoreList {
   //Creates five "default" events
   initializeDefaultStores() {
     let store1 = new Store(
-      "Björn's LEGO Fakestore",
-      'https://legofakestore-api.herokuapp.com/'
-    );
-    this.storeArray.push(store1);
-    let store2 = new Store(
       'Vanilla Fakestore',
       'https://fakestoreapi.com/products'
     );
+    this.storeArray.push(store1);
+    let store2 = new Store(
+      "Björn's Fakestore",
+      'https://legofakestore-api.herokuapp.com/'
+      
+    );
     this.storeArray.push(store2);
     let store3 = new Store(
-      'Jimmys Fakestore',
+      "Jimmy's Fakestore",
       'https://pokemonwebb20.herokuapp.com/',
       [
         { id: 'id' },
@@ -33,7 +34,7 @@ class StoreList {
     );
     this.storeArray.push(store3);
     let store4 = new Store(
-      'Georgios Fakestore',
+      "Georgios' Fakestore",
       'http://georgios-restfulapi.herokuapp.com/',
       [
         { title: 'cardname' },
@@ -45,6 +46,18 @@ class StoreList {
       ]
     );
     this.storeArray.push(store4);
+    let store5 = new Store(
+      "Niklas' Fakestore",
+      'https://top-console-games-api.herokuapp.com/',
+      [
+        { id: 'id' },
+        { title: 'name' },
+        { description: 'description' },
+        { category: 'category' },
+        { image: 'img' },
+      ]
+    );
+    this.storeArray.push(store5);
     console.log(this.storeArray);
     this.updateToLocalStorage();
   }
