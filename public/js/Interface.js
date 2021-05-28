@@ -34,7 +34,7 @@ class Interface {
     storeDiv.appendChild(nameButton);
     //Create a postlink to the config Site
     let storeForm = document.createElement('form');
-    storeForm.setAttribute('action', 'store/');
+    storeForm.setAttribute('action', 'storev2/');
     storeForm.setAttribute('method', 'post');
     store.attributesConfig.forEach((element) => {
       console.log(element, Array.from(element).length, typeof Array.from(element));
